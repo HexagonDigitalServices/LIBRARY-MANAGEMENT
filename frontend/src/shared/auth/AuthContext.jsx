@@ -359,24 +359,3 @@ const mapUserToFrontend = (user) => {
       };
     }
   };
-
-  return (
-    <AuthContext.Provider
-      value={{
-        accounts,
-        currentUser,
-        login,
-        logout,
-        ready,
-        signup,
-        registerStudent,
-        verifyOtpCode,
-        completeProfileData,
-        accountExists,
-        updateProfile,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};

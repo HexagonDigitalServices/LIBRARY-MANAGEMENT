@@ -17,7 +17,6 @@ const mapUserToFrontend = (user) => {
   };
 };
 
-export const AuthProvider = ({ children }) => {
   const [accounts, setAccounts] = useState(defaultAccounts);
   const [currentUser, setCurrentUser] = useState(null);
   const [ready, setReady] = useState(false);

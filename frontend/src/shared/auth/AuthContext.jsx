@@ -17,7 +17,6 @@ const mapUserToFrontend = (user) => {
   };
 };
 
-export const AuthProvider = ({ children }) => {
   const [accounts, setAccounts] = useState(defaultAccounts);
   const [currentUser, setCurrentUser] = useState(null);
   const [ready, setReady] = useState(false);
@@ -360,24 +359,3 @@ export const AuthProvider = ({ children }) => {
       };
     }
   };
-
-  return (
-    <AuthContext.Provider
-      value={{
-        accounts,
-        currentUser,
-        login,
-        logout,
-        ready,
-        signup,
-        registerStudent,
-        verifyOtpCode,
-        completeProfileData,
-        accountExists,
-        updateProfile,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};

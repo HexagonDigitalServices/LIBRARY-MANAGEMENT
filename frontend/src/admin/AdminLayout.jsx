@@ -28,3 +28,17 @@ const navItems = [
     icon: "alerts",
   },
 ];
+
+const footerItems = currentUser
+  ? [
+      {
+        label: "Logout",
+        icon: "login",
+        kind: "primary",
+        action: () => {
+          logout();
+          navigate("/login");
+        },
+      },
+    ]
+  : [];

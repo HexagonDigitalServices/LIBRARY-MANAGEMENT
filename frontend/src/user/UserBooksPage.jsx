@@ -1,4 +1,4 @@
-const filteredIssuedBooks = useMemo(() => {
+  const filteredIssuedBooks = useMemo(() => {
     return currentUserHistory.filter((record) => {
       const term = filters.search.toLowerCase();
       const matchesSearch =
@@ -14,3 +14,8 @@ const filteredIssuedBooks = useMemo(() => {
       return matchesSearch && matchesStatus;
     });
   }, [currentUser?.name, currentUserHistory, filters]);
+
+   <option value="All">All Status</option>
+              <option value="Borrowed">Borrowed</option>
+              <option value="Overdue">Overdue</option>
+              <option value="Returned">Returned</option>
